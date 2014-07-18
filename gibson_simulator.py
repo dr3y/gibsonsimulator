@@ -166,17 +166,7 @@ def partD(X,R,P,endlist,time = 1.0,makeMovie = True,frames=300,movieout = "C:\\U
     #actual    
     #print accX
     #print levelslist
-    '''
-    x1 = [a[0] for a in accX]
-    x2 = [a[1] for a in accX]
-    x3 = [a[2] for a in accX]
-    run = [accT,x1,x2,x3]
-    runscore+=[run]
-    stoc.plt.plot(accT,x1)
-    stoc.plt.plot(accT,x2)
-    stoc.plt.plot(accT,x3)
-    stoc.plt.legend(['A','B','Z'])
-    '''
+
     return accT,sizelist,newP
 
 
@@ -185,7 +175,7 @@ def run140716():
     desktopPath = "C:\\Users\\Andrey\\Desktop\\"
     filePath = gbU.guttDNA
     print 'reading seqs'
-    inseqs = filU.readOligoSeqs(filePath+'Xist Assembly\\140207SynthXist\\WTassy.fas')#'Assemblies\\malat1\\malat1.fas')
+    inseqs = filU.readOligoSeqs(filePath+'Assemblies\\malat1\\malat1.fas')
     
     print 'making overhangs'
     overarry, endlist, polymerlist,X = makeOverhangs(inseqs,50,concentration=2000)
@@ -198,9 +188,9 @@ def run140716():
     endsquery.close()
     
     print "making blast database"
-    #makeBLASTDatabase(filePath+"temp\\testdb.fas")
+    makeBLASTDatabase(filePath+"temp\\testdb.fas")
     print "performing a query"
-    #blastSearch(filePath+"temp\\testquery.fas")
+    blastSearch(filePath+"temp\\testquery.fas")
     
     print 'matching ends'
     matchlist = readBlast(filePath+"temp\\searchout.txt")
