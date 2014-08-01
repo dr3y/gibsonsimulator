@@ -5,7 +5,7 @@ import random as r
 import time
 import sys
 #print sys.path
-sys.path.append("C:\\Users\\Andrey\\SkyDrive\\Guttlab\\Python")
+#sys.path.append("C:\\Users\\Andrey\\SkyDrive\\Guttlab\\Python")
 import pydna
 
 import genbankUtils as gbU
